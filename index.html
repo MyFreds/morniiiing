@@ -117,17 +117,17 @@
     var sudahKlik = false;
 
     document.getElementById("loveIn").onclick = function (event) {
-      event.preventDefault();
-      
+  event.preventDefault(); // Mencegah refresh halaman akibat klik href="#"
+
   if (!sudahKlik) {
-    sudahKlik = true; // Tandai bahwa tombol sudah diklik
+    sudahKlik = true;
 
     // Ubah gaya SVG agar lebih terlihat
     document.querySelector('.lovein svg').style.animation = 'none';
     document.querySelector('.lovein svg').style.stroke = '#ff0000';
     document.querySelector('.lovein svg').style.strokeWidth = '1.3';
     document.querySelector('.lovein svg').style.fill = 'none';
-    document.getElementById('ket').innerHTML = 'Sekarang sentuh lagi LOVEnya!'; // Beri pesan yang berbeda
+    document.getElementById('ket').innerHTML = 'Sekarang sentuh lagi LOVEnya!'; // Ubah pesan
 
   } else {
     audio.play();
