@@ -116,7 +116,9 @@
 
     var sudahKlik = false;
 
-    document.getElementById("loveIn").onclick = function () {
+    document.getElementById("loveIn").onclick = function (event) {
+      event.preventDefault();
+      
   if (!sudahKlik) {
     sudahKlik = true; // Tandai bahwa tombol sudah diklik
 
